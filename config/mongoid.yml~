@@ -82,4 +82,4 @@ test:
 production:
   sessions:
     default:
-      uri: <%= ENV['mongodb://<Talisantos>:<password>@alex.mongohq.com:10002/app9307913'] %>
+      uri: <%= ENV['mongodb://<user>:<password>@alex.mongohq.com:10002/app9307913'] %>
