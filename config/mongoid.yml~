@@ -78,8 +78,3 @@ test:
         # low amounts for fast failures.
         max_retries: 1
         retry_interval: 0
-        
-production:
-  sessions:
-    default:
-      uri: <%= ENV['mongodb://<user>:<password>@alex.mongohq.com:10002/app9307913'] %>
