@@ -11,5 +11,5 @@ SeriesJump::Application.routes.draw do
 	match '/auth/failure' => 'sessions#failure'
 	match '/signout' => 'sessions#destroy', :as => :signout
 	match '/signin' => 'sessions#new', :as => :signin
-	match '/signin1' => 'sessions#newother'
+	match '/signin1' => 'sessions#newother', :as => :signin1
 end

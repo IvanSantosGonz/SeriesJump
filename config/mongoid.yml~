@@ -80,6 +80,12 @@ test:
         retry_interval: 0
         
 production:
-  sessions:
-    default:
-      uri: <%= ENV['mongodb://<user>:<password>@alex.mongohq.com:10002/app9307913'] %>
+  <% if ENV['MONGOHQ_URL'] %>
+  production:
+    sessions:
+      default:
+        uri: <%= ENV['MONGOHQ_URL'] %>
+        options:
+          skip_version_check: true
+          safe: true
+<% end %>
